@@ -1,0 +1,84 @@
+<app-navbar></app-navbar>
+<section class="d-flex" >
+    <aside class="content">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ3Ca2tSkD_31bPEtrBGTof0u4vpUhAd7CZV5RC8z7fnpfjlFMf0ooj66USnwLcumZQu8&usqp=CAU"/>
+        <h1>Chicken Dum Briyani</h1>
+        <p>Indulge in flavorful harmony: Chicken Dum Biryani, where every bite tells a delicious tale!</p>
+        <p>Shared By <Strong>Preethi</Strong></p>
+        <div class="p-2">
+            Rate your try
+                @for (item of [1,2,3,4,5]; track $index) {
+                    <mat-icon fontIcon="star"></mat-icon>
+                }
+        </div>
+    </aside>
+    <div class="details">
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+              <mat-expansion-panel-header class="summary">
+                <mat-panel-title>Ingredients</mat-panel-title>
+              </mat-expansion-panel-header>
+              <li>4 tablespoons vegetable oil, divided</li>
+              <li>4 small potatoes, peeled and halved</li>
+              <li>2 large onions, finely chopped</li>
+              <li>2 cloves garlic, minced</li>
+              <li>½ teaspoon ground cardamom</li>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+              <mat-expansion-panel-header class="summary">
+                <mat-panel-title>Making</mat-panel-title>
+              </mat-expansion-panel-header>
+              <li>Gather all ingredients.</li>
+              <li>Heat 2 tablespoons of oil in a large skillet. Fry potatoes in hot oil until lightly browned, about 3 to 5 minutes. Remove to a paper towel-lined plate to drain; set aside.</li>
+              <li>Add remaining 2 tablespoons of oil to the skillet. Add onions, garlic, and fresh ginger; cook and stir until onion is soft and golden. Add tomatoes, salt, cumin, chili powder, pepper, and turmeric; cook, stirring constantly, for 5 minutes.
+              </li>
+              <li>Stir in yogurt, mint, ground cardamom, and cinnamon stick. Cover and cook over low heat, stirring occasionally, until tomatoes are cooked to a pulp. It may be necessary to add a little hot water if mixture becomes too dry and starts to stick to the pan.</li>
+              <li>Add chicken and stir well to coat. Cover and cook over very low heat until chicken is tender, 35 to 45 minutes. There should only be a little very thick gravy left when chicken is finished cooking. If necessary cook uncovered for a few minutes to reduce the gravy.</li>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <div class="container p-2 m-1">
+            <div class="chart">
+              <div class="rate-box">
+                <span class="value">5</span>
+                <div class="progress-bar">
+                  <span class="progress"></span>
+                </div>
+                <span class="count">0</span>
+              </div>
+              <div class="rate-box">
+                <span class="value">4</span>
+                <div class="progress-bar"><span class="progress"></span></div>
+                <span class="count">0</span>
+              </div>
+              <div class="rate-box">
+                <span class="value">3</span>
+                <div class="progress-bar"><span class="progress"></span></div>
+                <span class="count">0</span>
+              </div>
+              <div class="rate-box">
+                <span class="value">2</span>
+                <div class="progress-bar"><span class="progress"></span></div>
+                <span class="count">2</span>
+              </div>
+              <div class="rate-box">
+                <span class="value">1</span>
+                <div class="progress-bar"><span class="progress"></span></div>
+                <span class="count">0</span>
+              </div>
+            </div>
+            <div class="global">
+              <span class="global-value">0.0</span>
+              <div class="rating-icons">
+                @for (item of [1,2,3,4,5]; track $index) {
+                    <mat-icon fontIcon="star"></mat-icon>
+                }
+              </div>
+              <span class="total-reviews">0</span>
+            </div>
+          </div>
+    </div>
+    
+</section>
+<app-footer></app-footer>

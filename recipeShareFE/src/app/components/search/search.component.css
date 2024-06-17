@@ -1,0 +1,38 @@
+.parent{
+    background-color: rgba(244, 244, 228, 0.838);;
+}
+
+.filter-items{
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.line{
+  width: 2px;
+  background-color: black;
+}
+.card {
+    max-width: 400px;
+    margin: 2rem;
+  }
+  
+  .card_more{
+    position: relative;
+    margin: -1.5rem 1.5rem -1.5rem 0;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: #fc05ae;
+    color: #fff;
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s;
+    border: none;
+  }
+
+  .card_more:hover{
+    background-color: rgb(233, 84, 186)
+  }

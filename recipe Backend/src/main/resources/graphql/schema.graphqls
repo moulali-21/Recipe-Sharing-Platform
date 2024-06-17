@@ -1,0 +1,75 @@
+#recipe
+type Recipe {
+  recipeId: ID!
+  title: String!
+  description: String
+  ingredients: String
+  instructions: String
+  user: User!
+  category: Category!
+}
+
+#user
+type User {
+  user_id: Int
+  userName: String!
+  email: String
+}
+
+
+#Category
+
+type Category {
+  category_id: Int!
+  name: String!
+  description: String
+}
+
+
+
+type Query {
+  getUserByName(userName: String!): User
+  getAllUsers: [User]
+  #Category
+  getCategoryById(name: String!): Category
+  getAllCategories: [Category]
+  #recipe
+  getRecipeByTitle(title: String!): Recipe
+  getAllRecipes: [Recipe]
+}
+
+input RecipeInput {
+  title: String!
+  description: String
+  ingredients: String
+  instructions: String
+  user: UserInput!
+  category: CategoryInput!
+}
+
+input CategoryInput {
+  name: String!
+  description: String
+}
+
+input UserInput {
+  userName: String!
+  email: String
+}
+
+type Mutation {
+  createUser(userName: String!, email: String!): User
+  updateUser(userName: String, email: String): User
+  deleteUser(userName: Int!): Boolean
+  #Category
+  createCategory(name: String!, description: String): Category
+  updateCategory(category_id: Int!, name: String, description: String): Category
+  deleteCategory(category_id: Int!): Boolean
+  #recipe
+  createRecipe(recipe:RecipeInput!): Recipe
+  updateRecipe(recipeId: ID!, title: String, description: String, ingredients: String, instructions: String): Recipe
+  deleteRecipe(recipeId: ID!): Boolean
+}
+
+
+

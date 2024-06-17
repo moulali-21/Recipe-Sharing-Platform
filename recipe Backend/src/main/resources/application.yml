@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "RecipeApp"
+
+    graphql:
+      graphiql:
+        enabled: true
+        path: /graphiql
+server:
+  port: 8082
+
+graphql:
+  servlet:
+    exception-handlers-enabled: true
